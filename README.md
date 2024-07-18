@@ -17,3 +17,5 @@
 
 -Title
 -Divider/Seperator
+
+in terms of reusability, there are two routes we can go: we can either reuse a disriminator (such as type:"danger") or we can reuse with something more mnual like, passing down color and size, i chose to go with the latter approach.

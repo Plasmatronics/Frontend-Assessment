@@ -17,14 +17,14 @@ export default function Chat({ icon, text, color = "gray.900" }: ChatProps) {
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
-    <HStack as="span">
+    <HStack as="span" paddingRight={8}>
       <IconComponent boxSize={4} color={color} />
       <Text
         as="h3"
-        letterSpacing="tight"
+        letterSpacing="normal"
         fontWeight="semibold"
         fontFamily="poppins"
-        fontSize="med"
+        fontSize="sm"
         color={color}
         noOfLines={1}
       >

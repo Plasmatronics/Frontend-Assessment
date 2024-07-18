@@ -21,10 +21,11 @@ export default function ButtonComponent({
 
   return (
     <Button
-      leftIcon={<IconComponent boxSize={4} />}
+      leftIcon={<IconComponent boxSize={3} color="black" />}
       borderRadius="base"
       boxShadow="md"
       background={buttonColor}
+      mb={20}
       _hover={{ background: darkenedColor }}
       _active={{
         background: darkenedColor,
@@ -33,7 +34,7 @@ export default function ButtonComponent({
       }}
       _focus={{ background: darkenedColor }}
     >
-      <Text fontSize={15}>{text}</Text>
+      <Text fontSize={13}>{text}</Text>
     </Button>
   );
 }
