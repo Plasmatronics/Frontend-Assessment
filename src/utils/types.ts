@@ -102,4 +102,8 @@ export type AllChakraColors =
   | "pink.600"
   | "pink.700"
   | "pink.800"
-  | "pink.900";
+  | "pink.900"
+  | "stone.100"
+  | "stone.200"
+  | "stone.300"
+  | "stone.400";

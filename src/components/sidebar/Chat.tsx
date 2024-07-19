@@ -36,7 +36,7 @@ export default function Chat({
         <Text
           as="h3"
           letterSpacing="normal"
-          fontWeight="semibold"
+          fontWeight={"semibold"}
           fontFamily="poppins"
           fontSize="sm"
           color={color}

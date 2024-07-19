@@ -18,22 +18,22 @@ function Feature({ icon, heading, text }: FeatureProps) {
       alignItems="center"
       direction="column"
     >
-      <IconComponent boxSize={3} />
+      <IconComponent color="stone.300" boxSize={3} />
       <Text
         letterSpacing="tight"
         fontWeight="semibold"
         fontFamily="poppins"
         fontSize="lg"
-        color="gray.900"
+        color="stone.300"
       >
         {heading}
       </Text>
       <Text
         letterSpacing="tight"
-        fontWeight="thin"
+        fontWeight="medium"
         fontFamily="poppins"
         fontSize="xs"
-        color="gray.700"
+        color="stone.200"
         align="center"
       >
         {text}

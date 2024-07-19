@@ -26,6 +26,11 @@ const theme = extendTheme({
       500: "#1C9A0A",
       600: "#138808",
     },
+    stone: {
+      100: "#74747c",
+      200: "#464652",
+      300: "#3a3a47",
+    },
   },
   fontSizes: {
     xs: "0.7rem",

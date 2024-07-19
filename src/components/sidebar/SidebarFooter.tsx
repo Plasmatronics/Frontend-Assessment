@@ -7,28 +7,28 @@ export default function SidebarFooter() {
       <Chat
         icon="DeleteIcon"
         text="Clear All Conversations"
-        color="gray.900"
+        color="stone.300"
         isChat={false}
       />
       <Chat
         isChat={false}
         icon="SunIcon"
         text="Switch to Light Mode"
-        color="gray.900"
+        color="stone.300"
       />
       <Chat
         isChat={false}
         icon="StarIcon"
         text="Upgrade to Pro"
-        color="gray.900"
+        color="stone.300"
       />
       <Chat
         isChat={false}
         icon="ExternalLinkIcon"
         text="Updates & FAQ"
-        color="gray.900"
+        color="stone.300"
       />
-      <Chat isChat={false} icon="UnlockIcon" text="Log Out" color="green.200" />
+      <Chat isChat={false} icon="UnlockIcon" text="Log Out" color="green.300" />
     </Flex>
   );
 }

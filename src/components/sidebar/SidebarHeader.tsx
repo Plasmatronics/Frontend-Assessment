@@ -21,10 +21,10 @@ export default function SidebarHeader() {
           </Text>
           <Text
             letterSpacing="tight"
-            fontWeight="thin"
+            fontWeight="medium"
             fontFamily="poppins"
             fontSize="xs"
-            color="gray.500"
+            color="stone.100"
           >
             Free Account
           </Text>
