@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/poppins";
 import "@fontsource/manrope";
+import { SHOW_SIDEBAR_WIDTH } from "./config";
 
 const theme = extendTheme({
   fonts: {
@@ -68,12 +69,13 @@ const theme = extendTheme({
     widest: "0.1em",
   },
   breakpoints: {
-    base: "0em",
-    sm: "30em",
-    md: "62em",
-    lg: "66em",
-    xl: "80em",
-    "2xl": "96em",
+    base: "0em", // 0px
+    xs: "27em", // 0px
+    sm: "30em", // 480px
+    md: SHOW_SIDEBAR_WIDTH, // 880px
+    lg: "66em", // 1056px
+    xl: "72em", // 1150px
+    "2xl": "96em", // 1536px
   },
 });
 

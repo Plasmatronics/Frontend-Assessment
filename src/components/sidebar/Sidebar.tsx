@@ -1,30 +1,16 @@
-import { Divider, Flex } from "@chakra-ui/react";
-import SidebarHeader from "./SidebarHeader";
-import SidebarBody from "./SidebarBody";
-import SidebarFooter from "./SidebarFooter";
+import { useMediaQuery } from "@chakra-ui/react";
 
-export default function Sidebar() {
-  return (
-    <Flex
-      as="aside"
-      borderRight="1px"
-      borderColor="gray.500"
-      alignItems="center"
-      width="20vw"
-      direction="column"
-      padding={4}
-      sx={{ gap: "1.2rem" }}
-      height="100vh"
-    >
-      <SidebarHeader />
-      <Divider color="gray.200" orientation="horizontal" />
+import { SHOW_SIDEBAR_WIDTH } from "../../utils/config";
+import TabbedComponent from "./TabbedComponent";
+import ButtonedTabComponent from "./ButtonedTabComponent";
+import { AcceptsTabState } from "../../utils/types";
 
-      {/* Placing these in a flex so icons are alligned on the left side */}
-      <Flex direction="column">
-        <SidebarBody />
-        <Divider color="gray.200" orientation="horizontal" />
-        <SidebarFooter />
-      </Flex>
-    </Flex>
+export default function Sidebar({ setTabOpen, tabOpen }: AcceptsTabState) {
+  const [isLargerThan800] = useMediaQuery(`(min-width: ${SHOW_SIDEBAR_WIDTH})`);
+
+  return isLargerThan800 ? (
+    <TabbedComponent />
+  ) : (
+    <ButtonedTabComponent tabOpen={tabOpen} setTabOpen={setTabOpen} />
   );
 }

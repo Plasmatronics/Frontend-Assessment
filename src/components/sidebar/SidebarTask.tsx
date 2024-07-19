@@ -30,13 +30,13 @@ export default function SidebarTask({
       }}
     >
       <HStack as="span">
-        <IconComponent boxSize={{ sm: 2.5, md: 3, lg: 4 }} color={color} />
+        <IconComponent boxSize={4} color={color} />
         <Text
           as="h4"
           letterSpacing="normal"
           fontWeight="semibold"
           fontFamily="poppins"
-          fontSize={{ sm: "xxs", md: "xs", lg: "sm" }}
+          fontSize="sm"
           color={color}
           noOfLines={1}
         >

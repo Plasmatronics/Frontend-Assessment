@@ -1,4 +1,5 @@
 import * as ChakraIcons from "@chakra-ui/icons";
+import { AllChakraColors } from "../utils/types";
 
 interface userDataType {
   firstName: string;
@@ -10,6 +11,13 @@ type featureDataType = {
   icon: keyof typeof ChakraIcons;
   heading: string;
   text: string;
+}[];
+
+type SettingsDataType = {
+  icon: keyof typeof ChakraIcons;
+  text: string;
+  color: AllChakraColors;
+  isChat: boolean;
 }[];
 
 const userData: userDataType = {
@@ -41,4 +49,32 @@ const featureData: featureDataType = [
   },
 ];
 
-export { userData, featureData };
+const settingsData: SettingsDataType = [
+  {
+    icon: "DeleteIcon",
+    text: "Clear All Conversations",
+    color: "stone.300",
+    isChat: false,
+  },
+  {
+    isChat: false,
+    icon: "SunIcon",
+    text: "Switch to Light Mode",
+    color: "stone.300",
+  },
+  {
+    isChat: false,
+    icon: "StarIcon",
+    text: "Upgrade to Pro",
+    color: "stone.300",
+  },
+  {
+    isChat: false,
+    icon: "ExternalLinkIcon",
+    text: "Updates & FAQ",
+    color: "stone.300",
+  },
+  { isChat: false, icon: "UnlockIcon", text: "Log Out", color: "green.300" },
+];
+
+export { userData, featureData, settingsData };

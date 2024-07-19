@@ -25,7 +25,7 @@ function Feature({ icon, heading, text }: FeatureProps) {
         letterSpacing="tight"
         fontWeight="semibold"
         fontFamily="poppins"
-        fontSize="lg"
+        fontSize={{ sm: "md", xl: "lg" }}
         color="stone.300"
       >
         {heading}
@@ -34,7 +34,7 @@ function Feature({ icon, heading, text }: FeatureProps) {
         letterSpacing="tight"
         fontWeight="medium"
         fontFamily="poppins"
-        fontSize="xs"
+        fontSize={{ sm: "xxs", xl: "xs" }}
         color="stone.200"
         align="center"
       >

@@ -13,7 +13,7 @@ function Searchbar() {
   return (
     <InputGroup
       borderRadius="md"
-      width="75%"
+      width={{ sm: "md", xl: "75%" }}
       sx={{ boxShadow: "0px 3px 4px 1px rgba(0, 0, 0, 0.25)" }}
     >
       <Link>

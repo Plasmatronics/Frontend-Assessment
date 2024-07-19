@@ -4,14 +4,10 @@ import { userData } from "../../database/defaultData";
 
 export default function SidebarHeader() {
   return (
-    <Center mr={12}>
+    <Center>
       <Flex sx={{ gap: "0.7rem" }} width="100%">
         <Center>
-          <CalendarIcon
-            boxShadow="lg"
-            color="green.500"
-            boxSize={{ sm: 6, md: 7, lg: 8 }}
-          />
+          <CalendarIcon boxShadow="lg" color="green.500" boxSize={8} />
         </Center>
         <Flex direction="column">
           <Text
@@ -19,7 +15,7 @@ export default function SidebarHeader() {
             letterSpacing="tight"
             fontWeight="semibold"
             fontFamily="poppins"
-            fontSize={{ sm: "sm", md: "md", lg: "lg" }}
+            fontSize="lg"
             color="gray.900"
           >
             Hello, {userData.firstName}

@@ -6,13 +6,16 @@ import Searchbar from "./Searchbar";
 function MainLayout() {
   return (
     <Flex
-      height="100vh"
-      width="80vw"
-      paddingX={20}
-      paddingY={40}
+      padding={40}
       direction="column"
+      justifyContent="center"
       alignItems="center"
-      sx={{ gap: "3.4rem" }}
+      sx={{
+        gap: {
+          base: "2rem",
+          lg: "3.4rem",
+        },
+      }}
     >
       <MainHeading />
       <Searchbar />
