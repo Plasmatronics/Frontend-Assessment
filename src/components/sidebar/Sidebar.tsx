@@ -6,19 +6,23 @@ import SidebarFooter from "./SidebarFooter";
 export default function Sidebar() {
   return (
     <Flex
-      borderRight="1px solid gray"
+      borderRight="1px"
+      borderColor="gray.500"
       alignItems="center"
-      width="23vw"
+      width="20vw"
       direction="column"
       height="100vh"
       padding={4}
       gap={4}
+      overflow={"hidden"}
     >
       <SidebarHeader />
-      <Divider orientation="horizontal" />
-      <SidebarBody />
-      <Divider orientation="horizontal" />
-      <SidebarFooter />
+      <Divider color="gray.200" orientation="horizontal" />
+      <Flex direction="column">
+        <SidebarBody />
+        <Divider color="gray.200" orientation="horizontal" />
+        <SidebarFooter />
+      </Flex>
     </Flex>
   );
 }

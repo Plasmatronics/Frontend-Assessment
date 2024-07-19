@@ -1,4 +1,4 @@
-import { Button, Text } from "@chakra-ui/react";
+import { Button, Center, Text } from "@chakra-ui/react";
 import * as ChakraIcons from "@chakra-ui/icons";
 // import { colorLightener } from "../../utils/helpers";
 import { colorDarkener } from "../../utils/helpers";
@@ -16,26 +16,29 @@ export default function ButtonComponent({
   buttonColor = "gray.200",
 }: ButtonProps) {
   const darkenedColor = colorDarkener(buttonColor);
-  // const lightenedColor = colorLightener(buttonColor);
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
-    <Button
-      leftIcon={<IconComponent boxSize={3} color="black" />}
-      borderRadius="base"
-      boxShadow="md"
-      background={buttonColor}
-      mb={20}
-      _hover={{ background: darkenedColor }}
-      _active={{
-        background: darkenedColor,
-        transform: "translateY(2px)",
-        boxShadow: "base",
-      }}
-      _focus={{ background: darkenedColor }}
-    >
-      <Text fontSize={13}>{text}</Text>
-    </Button>
+    <Center>
+      <Button
+        leftIcon={<IconComponent boxSize={3} color="black" />}
+        borderRadius="md"
+        boxShadow="md"
+        width={200}
+        background={buttonColor}
+        mb={12}
+        mt={2}
+        _hover={{ background: darkenedColor }}
+        _active={{
+          background: darkenedColor,
+          transform: "translateY(2px)",
+          boxShadow: "base",
+        }}
+        _focus={{ background: darkenedColor }}
+      >
+        <Text fontSize="sm">{text}</Text>
+      </Button>
+    </Center>
   );
 }
 //"AddIcon"
