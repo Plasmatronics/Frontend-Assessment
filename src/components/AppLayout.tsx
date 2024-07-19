@@ -1,4 +1,4 @@
-import Sidebar from "../components/sidebar/Sidebar";
+import SidebarLayout from "../components/sidebar/SidebarLayout";
 import MainLayout from "../components/main/MainLayout";
 import { Box, Flex } from "@chakra-ui/react";
 import { useState } from "react";
@@ -7,7 +7,7 @@ export default function AppLayout() {
   const [tabOpen, setTabOpen] = useState(false);
 
   return (
-    <Flex position="relative" width="100vw">
+    <Flex overflow="hidden" position="relative" height="100vh" width="100vw">
       <Box
         bg="white"
         zIndex={100}
@@ -18,7 +18,7 @@ export default function AppLayout() {
           md: "275px",
         }}
       >
-        <Sidebar tabOpen={tabOpen} setTabOpen={setTabOpen} />
+        <SidebarLayout tabOpen={tabOpen} setTabOpen={setTabOpen} />
       </Box>
       {tabOpen && (
         <Box
@@ -27,11 +27,11 @@ export default function AppLayout() {
           position="absolute"
           top={0}
           left={0}
-          width="100%"
-          height="100%"
+          width="100vw"
+          height="100vh"
         />
       )}
-      <Box overflowX="hidden" zIndex={10} flex={1}>
+      <Box zIndex={10} flex={1}>
         <MainLayout />
       </Box>
     </Flex>

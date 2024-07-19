@@ -5,6 +5,7 @@ import { settingsData } from "../../database/defaultData";
 export default function SidebarFooter() {
   return (
     <Flex direction="column" mt={2}>
+      {/* rendering a sidebartask for each setting with ths specified variations */}
       {settingsData.map((setting, index) => (
         <SidebarTask
           key={index}

@@ -6,6 +6,7 @@ export default function SidebarHeader() {
   return (
     <Center>
       <Flex sx={{ gap: "0.7rem" }} width="100%">
+        {/* again using the esacoe hatch for gap */}
         <Center>
           <CalendarIcon boxShadow="lg" color="green.500" boxSize={8} />
         </Center>

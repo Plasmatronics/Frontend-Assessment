@@ -6,7 +6,8 @@ import Searchbar from "./Searchbar";
 function MainLayout() {
   return (
     <Flex
-      padding={40}
+      paddingY={40}
+      paddingX={{ sm: 0, md: 10 }}
       direction="column"
       justifyContent="center"
       alignItems="center"

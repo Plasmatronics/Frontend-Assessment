@@ -88,6 +88,15 @@ _database:_ I Chose to include a fake database to keep data seperate from UI log
 
 _pages:_ This is PURELY AN ASSEMBLY PAGE, no logic will be placed here. I could have left this page out, but this is more similar to how i would structure an actual project and I always like to have an assmebly page free of any state or anything like that.
 
-_utils:_ These are full of "helper" functions, or things we generally want to use all over the application but they dont actually do anything (they are very pure). This is filled with types, colorDarkening functions, and even a (very) small config file.
+_utils:_ These are full of "helper" functions, or things we generally want to use all over the application but they dont actually do anything (they are very pure). This is filled with types, the theme, color alteration functions, and even a (very) small config file.
 
 _components_: This is where all the meat is. I have a sub folder for the aside and then one for the main page, then a file not in either folder that is used for the layout. Again, I could have done this in the page folder but there would have had to have been state there, which is a no no for me personally.
+
+## Potential Improvements
+
+There are some improvements I would definitely like to make and I very well might in a few hours:
+-Able to close the tab component in mobile-mode by clicking outside the tab
+-Adding Dark Mode, which is also able to detect user's system setting (dark or light)
+-Adding a custom highlight color for highlighted text
+-Adding more accesibility (pressing the tab button will filter through all possible inputs, buttons, and links in an orderly way)
+-I later found out we have an iconbutton component so i would go back and unnest some buttons and such i wanted to click on

@@ -3,7 +3,7 @@ import SidebarHeader from "./SidebarHeader";
 import SidebarBody from "./SidebarBody";
 import SidebarFooter from "./SidebarFooter";
 
-export default function TabbedComponent() {
+export default function SidebarBaseComponent() {
   return (
     <Flex
       as="aside"
@@ -13,6 +13,7 @@ export default function TabbedComponent() {
       direction="column"
       padding={4}
       height="100vh"
+      // gap hard to to toggle with chakra so i used the escape hatch
       sx={{ gap: "1.2rem" }}
     >
       <SidebarHeader />

@@ -16,5 +16,6 @@ export default function SidebarBody() {
       ))}
       <ButtonComponent buttonColor="gray.100" icon="AddIcon" text="New Chat" />
     </Flex>
+    // rendering a sidebar tast for ecah past chat, and then also the button component
   );
 }
