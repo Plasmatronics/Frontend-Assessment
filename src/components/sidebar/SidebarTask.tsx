@@ -3,17 +3,14 @@ import { HStack, Link, Text } from "@chakra-ui/react";
 import * as ChakraIcons from "@chakra-ui/icons";
 import { AllChakraColors } from "../../utils/types";
 
-// Define the props interface
 interface ChatProps {
-  // creating a union type of all possible icon values
   icon: keyof typeof ChakraIcons;
   text: string;
-  // we'll give a default color of gray.900, so well leave color as optional
   color?: AllChakraColors;
   isChat?: boolean;
 }
 
-export default function Chat({
+export default function SidebarTask({
   icon,
   text,
   color = "gray.900",
@@ -23,6 +20,7 @@ export default function Chat({
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
+    //if its a chat element we will highlight gray, otherwise just make it clickable
     <Link
       paddingX={3}
       paddingY={2.5}
@@ -34,9 +32,9 @@ export default function Chat({
       <HStack as="span">
         <IconComponent boxSize={4} color={color} />
         <Text
-          as="h3"
+          as="h4"
           letterSpacing="normal"
-          fontWeight={"semibold"}
+          fontWeight="semibold"
           fontFamily="poppins"
           fontSize="sm"
           color={color}

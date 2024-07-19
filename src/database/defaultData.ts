@@ -30,14 +30,14 @@ const featureData: featureDataType = [
     text: "Fine-tuned data and trained on fence-related data only.",
   },
   {
-    icon: "StarIcon",
-    heading: "Industry Specific",
-    text: "Fine-tuned data and trained on fence-related data only.",
+    icon: "CheckIcon",
+    heading: "Response Accuracy",
+    text: "Refined data sets allow for 99% response accuracy.",
   },
   {
-    icon: "StarIcon",
-    heading: "Industry Specific",
-    text: "Fine-tuned data and trained on fence-related data only.",
+    icon: "TriangleUpIcon",
+    heading: "Increased Efficiency",
+    text: "Automate workflow tasks, fast response-rates, and more.",
   },
 ];
 

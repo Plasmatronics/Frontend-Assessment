@@ -5,12 +5,13 @@ import { userData } from "../../database/defaultData";
 export default function SidebarHeader() {
   return (
     <Center mr={12}>
-      <Flex gap={3} width="100%">
+      <Flex sx={{ gap: "0.7rem" }} width="100%">
         <Center>
           <CalendarIcon boxShadow="lg" color="green.500" boxSize={8} />
         </Center>
         <Flex direction="column">
           <Text
+            as="h3"
             letterSpacing="tight"
             fontWeight="semibold"
             fontFamily="poppins"

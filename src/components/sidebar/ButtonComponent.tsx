@@ -10,12 +10,17 @@ interface ButtonProps {
   buttonColor?: AllChakraColors;
 }
 
+//restricting this API to icon, text, and buttonColor
+
 export default function ButtonComponent({
   icon,
   text,
   buttonColor = "gray.200",
 }: ButtonProps) {
+  //function darkens by one shade
   const darkenedColor = colorDarkener(buttonColor);
+
+  //getting the icon property from all chakraIcons, so we can render passed in icon, asserting it as a react element
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
@@ -41,4 +46,3 @@ export default function ButtonComponent({
     </Center>
   );
 }
-//"AddIcon"

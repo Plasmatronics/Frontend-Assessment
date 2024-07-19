@@ -1,5 +1,13 @@
-import AppLayout from "../components/AppLayout";
+import Sidebar from "../components/sidebar/Sidebar";
+import MainLayout from "../components/main/MainLayout";
+import { Flex } from "@chakra-ui/react";
 
-export default function ChatPage() {
-  return <AppLayout />;
+//rendering the sidebar and main layout here
+export default function AppLayout() {
+  return (
+    <Flex>
+      <Sidebar />
+      <MainLayout />
+    </Flex>
+  );
 }

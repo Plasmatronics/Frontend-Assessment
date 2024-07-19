@@ -4,7 +4,7 @@ import { featureData } from "../../database/defaultData";
 
 export default function Features() {
   return (
-    <Flex gap={20}>
+    <Flex sx={{ gap: "1.3rem" }}>
       {featureData.map((featureObject, index) => (
         <Feature
           icon={featureObject.icon}

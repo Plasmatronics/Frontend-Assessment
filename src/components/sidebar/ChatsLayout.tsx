@@ -1,11 +1,10 @@
-import { Flex } from "@chakra-ui/react";
 import SidebarTask from "./SidebarTask";
 import { userData } from "../../database/defaultData";
-import ButtonComponent from "./ButtonComponent";
+import { Box } from "@chakra-ui/react";
 
-export default function SidebarBody() {
+export default function ChatsLayout() {
   return (
-    <Flex direction="column" sx={{ gap: "0.2rem" }} mb={7}>
+    <Box>
       {userData.pastChats?.map((chat, index) => (
         <SidebarTask
           key={index}
@@ -14,7 +13,6 @@ export default function SidebarBody() {
           color="stone.300"
         />
       ))}
-      <ButtonComponent buttonColor="gray.100" icon="AddIcon" text="New Chat" />
-    </Flex>
+    </Box>
   );
 }

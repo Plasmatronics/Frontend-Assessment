@@ -7,12 +7,13 @@ interface FeatureProps {
   text: string;
 }
 
+//limiting the api to heading, the actual text, and the icon
 function Feature({ icon, heading, text }: FeatureProps) {
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
     <Flex
-      sx={{ gap: "4px" }}
+      sx={{ gap: ".2rem" }}
       width={170}
       flexWrap="wrap"
       alignItems="center"
@@ -20,6 +21,7 @@ function Feature({ icon, heading, text }: FeatureProps) {
     >
       <IconComponent color="stone.300" boxSize={3} />
       <Text
+        as="h3"
         letterSpacing="tight"
         fontWeight="semibold"
         fontFamily="poppins"

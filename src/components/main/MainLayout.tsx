@@ -11,7 +11,7 @@ function MainLayout() {
       paddingY={40}
       direction="column"
       alignItems="center"
-      sx={{ gap: "55px" }}
+      sx={{ gap: "3.4rem" }}
     >
       <MainHeading />
       <Searchbar />

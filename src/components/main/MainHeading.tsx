@@ -2,7 +2,7 @@ import { Divider, Flex, Text } from "@chakra-ui/react";
 
 function MainHeading() {
   return (
-    <Flex alignItems="center">
+    <Flex as="h2" alignItems="center">
       <Text fontWeight="bold" fontSize="4xl" color="stone.200">
         Welcome to
       </Text>
@@ -16,7 +16,7 @@ function MainHeading() {
         ml={3}
         mr={2}
       />
-      <Text fontWeight="black" fontSize="5xl" color="stone.300">
+      <Text as="h1" fontWeight="black" fontSize="5xl" color="stone.300">
         FenceGPT
       </Text>
     </Flex>
