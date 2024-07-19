@@ -12,9 +12,9 @@ export default function Sidebar() {
       alignItems="center"
       width="20vw"
       direction="column"
-      height="100vh"
       padding={4}
       sx={{ gap: "1.2rem" }}
+      height="100vh"
     >
       <SidebarHeader />
       <Divider color="gray.200" orientation="horizontal" />

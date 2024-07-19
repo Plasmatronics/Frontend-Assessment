@@ -33,6 +33,7 @@ const theme = extendTheme({
     },
   },
   fontSizes: {
+    xxs: "0.65rem",
     xs: "0.7rem",
     sm: "0.77rem",
     md: ".9rem",
@@ -65,6 +66,14 @@ const theme = extendTheme({
     wide: "0.025em",
     wider: "0.05em",
     widest: "0.1em",
+  },
+  breakpoints: {
+    base: "0em",
+    sm: "30em",
+    md: "62em",
+    lg: "66em",
+    xl: "80em",
+    "2xl": "96em",
   },
 });
 

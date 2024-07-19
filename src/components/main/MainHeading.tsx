@@ -2,8 +2,8 @@ import { Divider, Flex, Text } from "@chakra-ui/react";
 
 function MainHeading() {
   return (
-    <Flex as="h2" alignItems="center">
-      <Text fontWeight="bold" fontSize="4xl" color="stone.200">
+    <Flex alignItems="center">
+      <Text as="h2" fontWeight="bold" fontSize="4xl" color="stone.200">
         Welcome to
       </Text>
       <Divider

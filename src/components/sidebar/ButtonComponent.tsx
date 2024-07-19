@@ -26,10 +26,12 @@ export default function ButtonComponent({
   return (
     <Center>
       <Button
-        leftIcon={<IconComponent boxSize={3} color="black" />}
+        leftIcon={
+          <IconComponent boxSize={{ sm: 1.5, md: 2, lg: 3 }} color="black" />
+        }
         borderRadius="md"
         boxShadow="md"
-        width={200}
+        width={{ sm: 150, md: 175, lg: 200 }}
         background={buttonColor}
         mb={12}
         mt={2}
@@ -41,7 +43,7 @@ export default function ButtonComponent({
         }}
         _focus={{ background: darkenedColor }}
       >
-        <Text fontSize="sm">{text}</Text>
+        <Text fontSize={{ sm: "xxs", md: "xs", lg: "sm" }}>{text}</Text>
       </Button>
     </Center>
   );

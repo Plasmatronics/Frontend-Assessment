@@ -6,6 +6,7 @@ import Searchbar from "./Searchbar";
 function MainLayout() {
   return (
     <Flex
+      height="100vh"
       width="80vw"
       paddingX={20}
       paddingY={40}
