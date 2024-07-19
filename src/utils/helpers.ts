@@ -1,5 +1,6 @@
 import { AllChakraColors } from "./types";
 
+//darkens the color by one shade
 export function colorDarkener(color: AllChakraColors): AllChakraColors {
   const colorAndVariation: string[] = color.split(".");
   const oldColorPrefix = colorAndVariation[0];
@@ -12,6 +13,7 @@ export function colorDarkener(color: AllChakraColors): AllChakraColors {
   return newColor as AllChakraColors;
 }
 
+//lightens the color by one shade
 export function colorLightener(color: AllChakraColors): AllChakraColors {
   const colorAndVariation: string[] = color.split(".");
   const oldColorPrefix = colorAndVariation[0];
