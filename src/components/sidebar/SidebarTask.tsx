@@ -38,6 +38,9 @@ export default function SidebarTask({
       _active={{
         background: isChat ? "gray.400" : undefined,
       }}
+      _focus={{
+        borderRadius: "md",
+      }}
       onClick={onClick}
     >
       <HStack as="span">
