@@ -2,14 +2,11 @@ import { Box, Flex, useMediaQuery } from "@chakra-ui/react";
 
 import SidebarLayout from "../components/sidebar/SidebarLayout";
 import MainLayout from "../components/main/MainLayout";
-import { useCloseTaskbar } from "../hooks/useCloseTaskbar";
+import { useCloseTaskbar } from "../contexts/CloseTaskbarContext";
 import { SHOW_SIDEBAR_WIDTH } from "../utils/config";
 
 export default function AppLayout() {
-  // we drill the custom hooks values to maintain the same instance, which is fine because its only a level or two
-  //not enough payoff to go through the effort of setting up context
-  //if we destructured in multiple files, each file would have its own instance of this state
-  const { ref, tabOpen, handleToggleSidebar } = useCloseTaskbar();
+  const { tabOpen, ref } = useCloseTaskbar();
   const [isLargerThan800] = useMediaQuery(`(min-width: ${SHOW_SIDEBAR_WIDTH})`);
 
   return (
@@ -25,14 +22,11 @@ export default function AppLayout() {
           md: "275px",
         }}
       >
-        <SidebarLayout
-          tabOpen={tabOpen}
-          handleToggleSidebar={handleToggleSidebar}
-          isLargerThan800={isLargerThan800}
-        />
+        {/* // prop drilling just a level or two is fine here */}
+        <SidebarLayout isLargerThan800={isLargerThan800} />
       </Box>
       <Box zIndex={10} flex={1}>
-        <MainLayout tabOpen={tabOpen} />
+        <MainLayout />
       </Box>
     </Flex>
   );

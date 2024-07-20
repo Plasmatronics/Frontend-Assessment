@@ -95,7 +95,9 @@ _utils:_ These are full of "helper" functions, or things we generally want to us
 
 _components_: This is where all the meat is. I have a sub folder for the aside and then one for the main page, then a file not in either folder that is used for the layout. Again, I could have done this in the page folder but there would have had to have been state there, which is a no no for me personally.\
 
-_components_: A seperate folder to create hook logic that will be helpful throughout our app and that we want to keep seperate.\
+_hooks_: A seperate folder to create hook logic that will be helpful throughout our app and that we want to keep seperate.\
+
+_context_: A seperate folder to create context and create a custom hook which we will only use in the context(no pun intended) of the provider.\
 
 ## Potential Improvements
 

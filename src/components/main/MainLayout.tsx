@@ -3,9 +3,12 @@ import { Box, Flex } from "@chakra-ui/react";
 import Features from "./Features";
 import MainHeading from "./MainHeading";
 import SearchbarWithButtons from "./SearchbarWithButtons";
+import { useCloseTaskbar } from "../../contexts/CloseTaskbarContext";
 
 //One job---> To lay main section out
-function MainLayout({ tabOpen }: { tabOpen: boolean }) {
+function MainLayout() {
+  const { tabOpen } = useCloseTaskbar();
+
   return (
     <Flex
       paddingY={40}

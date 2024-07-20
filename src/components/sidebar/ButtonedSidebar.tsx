@@ -1,17 +1,11 @@
+import { useCloseTaskbar } from "../../contexts/CloseTaskbarContext";
 import SidebarBase from "./SidebarBase";
 import ToggleSidebarButton from "./ToggleSidebarButton";
 
 import { Box } from "@chakra-ui/react";
 
-interface AcceptsTabState {
-  tabOpen: boolean;
-  handleToggleSidebar: () => void;
-}
-
-export default function ButtonedSidebar({
-  tabOpen,
-  handleToggleSidebar,
-}: AcceptsTabState) {
+export default function ButtonedSidebar() {
+  const { tabOpen, handleToggleSidebar } = useCloseTaskbar();
   return (
     <Box position="relative">
       <ToggleSidebarButton onClick={handleToggleSidebar} />
