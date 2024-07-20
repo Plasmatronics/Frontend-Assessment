@@ -10,7 +10,7 @@ export default function BasicSearchbar() {
       placeholder={
         isNotPhone
           ? "Generate a detailed fence estimation outline."
-          : "Are Fences Expensive?"
+          : "Are fences expensive?"
       }
       textAlign="center"
       letterSpacing="normal"
