@@ -2,12 +2,12 @@ import { AddIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import {
   Link,
   Circle,
-  Input,
   InputGroup,
   InputLeftElement,
   InputRightElement,
 } from "@chakra-ui/react";
 import { colorDarkener } from "../../utils/helpers";
+import MainSearchbar from "./MainSearchbar";
 
 function Searchbar() {
   return (
@@ -19,44 +19,32 @@ function Searchbar() {
       <Link>
         <InputLeftElement>
           <Circle
-            bg="green.500"
+            bg="green.400"
             padding={1}
-            _hover={{ background: colorDarkener("green.500") }}
+            _hover={{ background: colorDarkener("green.400") }}
             _active={{
-              background: colorDarkener("green.500"),
+              background: colorDarkener("green.400"),
               transform: "translateY(0.5px)",
               boxShadow: "base",
             }}
-            _focus={{ background: colorDarkener("green.500") }}
+            _focus={{ background: colorDarkener("green.400") }}
           >
             <AddIcon color="white" />
           </Circle>
         </InputLeftElement>
       </Link>
-      <Input
-        borderRadius="inherit"
-        placeholder='"Example": Generate a detailed fence estimation outline.'
-        textAlign="center"
-        letterSpacing="normal"
-        fontWeight={600}
-        fontFamily="poppins"
-        fontSize="sm"
-        color="stone.300"
-        _placeholder={{
-          color: "stone.100",
-        }}
-      />
+      <MainSearchbar />
       <Link>
         <InputRightElement>
           <ArrowRightIcon
-            color="green.500"
-            _hover={{ color: colorDarkener("green.500") }}
+            color="green.400"
+            _hover={{ color: colorDarkener("green.400") }}
             _active={{
-              color: colorDarkener("green.500"),
+              color: colorDarkener("green.400"),
               transform: "translateY(0.5px)",
               boxShadow: "base",
             }}
-            _focus={{ color: colorDarkener("green.500") }}
+            _focus={{ color: colorDarkener("green.400") }}
           />
         </InputRightElement>
       </Link>
