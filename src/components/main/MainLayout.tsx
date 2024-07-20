@@ -14,7 +14,7 @@ function MainLayout() {
       sx={{
         gap: {
           base: "2rem",
-          lg: "3.4rem",
+          xl: "3.4rem",
         },
       }}
     >
