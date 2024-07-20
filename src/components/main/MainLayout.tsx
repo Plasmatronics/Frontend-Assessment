@@ -7,7 +7,20 @@ import SearchbarWithButtons from "./SearchbarWithButtons";
 //One job---> To lay main section out
 function MainLayout({ tabOpen }: { tabOpen: boolean }) {
   return (
-    <>
+    <Flex
+      paddingY={40}
+      paddingX={{ sm: 0, md: 10 }}
+      direction="column"
+      position="relative"
+      justifyContent="center"
+      alignItems="center"
+      sx={{
+        gap: {
+          base: "2rem",
+          xl: "3.4rem",
+        },
+      }}
+    >
       {tabOpen && (
         <Box
           zIndex={50}
@@ -19,24 +32,10 @@ function MainLayout({ tabOpen }: { tabOpen: boolean }) {
           height="200vh"
         />
       )}
-      <Flex
-        paddingY={40}
-        paddingX={{ sm: 0, md: 10 }}
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        sx={{
-          gap: {
-            base: "2rem",
-            xl: "3.4rem",
-          },
-        }}
-      >
-        <MainHeading />
-        <SearchbarWithButtons />
-        <Features />
-      </Flex>
-    </>
+      <MainHeading />
+      <SearchbarWithButtons />
+      <Features />
+    </Flex>
   );
 }
 
