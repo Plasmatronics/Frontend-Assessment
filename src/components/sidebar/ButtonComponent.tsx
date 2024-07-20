@@ -29,7 +29,7 @@ export default function ButtonComponent({
         leftIcon={<IconComponent boxSize={3} color="black" />}
         borderRadius="md"
         boxShadow="md"
-        width={200}
+        width={{ base: "150px", sm: "200px" }}
         background={buttonColor}
         mb={12}
         mt={2}
