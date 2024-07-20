@@ -1,8 +1,12 @@
-import { AcceptsTabState } from "../../utils/types";
-import TabButton from "./TabButton";
 import SidebarBase from "./SidebarBase";
+import ToggleSidebarButton from "./ToggleSidebarButton";
 
 import { Box } from "@chakra-ui/react";
+
+interface AcceptsTabState {
+  tabOpen: boolean;
+  handleToggleSidebar: () => void;
+}
 
 export default function ButtonedSidebar({
   tabOpen,
@@ -10,8 +14,8 @@ export default function ButtonedSidebar({
 }: AcceptsTabState) {
   return (
     <Box position="relative">
-      <TabButton onClick={handleToggleSidebar} />
-      {/* //if its open well present the baseSidebar, otherwise not */}
+      <ToggleSidebarButton onClick={handleToggleSidebar} />
+      {/* //if its open we'll present the baseSidebar, otherwise not */}
       {tabOpen && <SidebarBase />}
     </Box>
   );

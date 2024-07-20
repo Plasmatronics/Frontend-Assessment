@@ -86,7 +86,7 @@ This also means that, even though the tab button and the buttons in the searchba
 
 ## Organization
 
-There are 4 main folders: components, databse, pages, and utils/
+There are 4 main folders: components, databse, pages, hooks and utils/
 _database:_ I Chose to include a fake database to keep data seperate from UI logic and because this is more similar to how we would actually be rendering components, through accepting data from an abstracted source then rendering in a reusable component where we can then style everything.(likely something more similar to JSON but this is no matter).\
 
 _pages:_ This is PURELY AN ASSEMBLY PAGE, no logic will be placed here. I could have left this page out, but this is more similar to how i would structure an actual project and I always like to have an assmebly page free of any state or anything like that.\
@@ -95,11 +95,18 @@ _utils:_ These are full of "helper" functions, or things we generally want to us
 
 _components_: This is where all the meat is. I have a sub folder for the aside and then one for the main page, then a file not in either folder that is used for the layout. Again, I could have done this in the page folder but there would have had to have been state there, which is a no no for me personally.\
 
+_components_: A seperate folder to create hook logic that will be helpful throughout our app and that we want to keep seperate.\
+
 ## Potential Improvements
 
 There are some improvements I would definitely like to make and I very well might in a few hours:\
 -Fixing the Colors for dark Mode\
 -add a custom icon+ change current icons to a more expansive icon pack.\
+
+## Final Question
+
+I notice my code strucutre is triangular in the sense that a parent has many children components. Lets say AppLayout > MainLayout > SeardchbarWithButtons > BasicSearchbar.... is this a problem?\
+Should i be coding in a manner where I limit the amount of children components if possible? Talk more ab this on call...\
 
 ## Extras (DONT NEED TO READ)
 

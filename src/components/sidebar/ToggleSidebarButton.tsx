@@ -5,7 +5,7 @@ interface TabButtonPropType {
   onClick: () => void;
 }
 
-export default function TabButton({ onClick }: TabButtonPropType) {
+export default function ToggleSidebarButton({ onClick }: TabButtonPropType) {
   return (
     <IconButton
       position={"absolute"}

@@ -1,7 +1,11 @@
-import { AcceptsTabState } from "../../utils/types";
 import SidebarBase from "./SidebarBase";
 import ButtonedSidebar from "./ButtonedSidebar";
 
+interface AcceptsTabState {
+  tabOpen: boolean;
+  handleToggleSidebar: () => void;
+  isLargerThan800: boolean;
+}
 // one goal--> render sideBar Component base or tabbed componnent with button
 export default function SidebarLayout({
   tabOpen,
