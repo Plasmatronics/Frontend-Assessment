@@ -13,8 +13,16 @@ export default function SidebarFooter() {
         return (
           <SidebarTask
             key={index}
-            icon={setting.icon}
-            text={setting.text}
+            //renders dark mode or light mode icon, or the current setting icon
+            icon={
+              isSunIcon && colorMode === "light" ? "MoonIcon" : setting.icon
+            }
+            //renders dark mode or light mode text, or the current setting text
+            text={
+              isSunIcon && colorMode === "dark"
+                ? "Switch to Light Mode"
+                : setting.text
+            }
             color={setting.color}
             isChat={setting.isChat}
             onClick={isSunIcon ? toggleColorMode : undefined}

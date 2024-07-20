@@ -59,7 +59,7 @@ const settingsData: SettingsDataType = [
   {
     isChat: false,
     icon: "SunIcon",
-    text: "Switch to Light Mode",
+    text: "Switch to Dark Mode",
     color: "stone.300",
   },
   {
