@@ -9,6 +9,7 @@ interface ChatProps {
   text: string;
   color?: AllChakraColors;
   isChat?: boolean;
+  onClick?: () => void;
 }
 
 export default function SidebarTask({
@@ -16,6 +17,7 @@ export default function SidebarTask({
   text,
   color = "gray.900",
   isChat = true,
+  onClick,
 }: ChatProps) {
   // getting the property name of the passed icon to render, asserting it's a react component
   const IconComponent = ChakraIcons[icon] as React.ElementType;
@@ -36,6 +38,7 @@ export default function SidebarTask({
       _active={{
         background: isChat ? "gray.400" : undefined,
       }}
+      onClick={onClick}
     >
       <HStack as="span">
         <IconComponent boxSize={4} color={color} />
