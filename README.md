@@ -97,22 +97,22 @@ _components_: This is where all the meat is. I have a sub folder for the aside a
 
 ## Potential Improvements
 
-There are some improvements I would definitely like to make and I very well might in a few hours:/
--Fixing the Colors for dark Mode/
--add a custom icon/ change current icons to a more expansive icon pack.\
+There are some improvements I would definitely like to make and I very well might in a few hours:\
+-Fixing the Colors for dark Mode\
+-add a custom icon+ change current icons to a more expansive icon pack.\
 
 ## Extras (DONT NEED TO READ)
 
 Color Palette:
-bg color: "white" on light, "gray.800" on dark/
-Features Headng, "FenceGPT", searched-text, pastChats, settings, clicked tab btn: stone.300/
-Features Body, "Welcome To": stone.200/
-searchbar placeholder, "free account", tab button: stone.100/
-sidebar button color: gray.100/
-sidebar dividers: gray.200/
-sidebar task hover: gray. 400/
-sidebar right border: gray.500/
-"Hello, Steve": gray.900/
-searchbar icons, calendar icon: green.400/
-log out: green.300/
-divider in main heading: green.500/
+bg color: "white" on light, "gray.800" on dark\
+Features Headng, "FenceGPT", searched-text, pastChats, settings, clicked tab btn: stone.300\
+Features Body, "Welcome To": stone.200\
+searchbar placeholder, "free account", tab button: stone.100\
+sidebar button color: gray.100\
+sidebar dividers: gray.200\
+sidebar task hover: gray. 400\
+sidebar right border: gray.500\
+"Hello, Steve": gray.900\
+searchbar icons, calendar icon: green.400\
+log out: green.300\
+divider in main heading: green.500\
