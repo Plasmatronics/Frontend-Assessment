@@ -27,19 +27,8 @@ export default function AppLayout() {
           isLargerThan800={isLargerThan800}
         />
       </Box>
-      {tabOpen && (
-        <Box
-          zIndex={50}
-          bg="rgba(0, 0, 0, 0.6)"
-          position="absolute"
-          top={0}
-          left={0}
-          width="100vw"
-          height="200vh"
-        />
-      )}
       <Box zIndex={10} flex={1}>
-        <MainLayout />
+        <MainLayout tabOpen={tabOpen} />
       </Box>
     </Flex>
   );
