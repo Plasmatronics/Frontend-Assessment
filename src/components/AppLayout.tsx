@@ -1,35 +1,16 @@
 import SidebarLayout from "../components/sidebar/SidebarLayout";
 import MainLayout from "../components/main/MainLayout";
+import { Box, Flex, useMediaQuery } from "@chakra-ui/react";
+import { useCloseTaskbar } from "../hooks/useCloseTaskbar";
 import { SHOW_SIDEBAR_WIDTH } from "../utils/config";
 
-import { Box, Flex, useMediaQuery, useOutsideClick } from "@chakra-ui/react";
-import { useRef, useState } from "react";
-
 export default function AppLayout() {
-  const [tabOpen, setTabOpen] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
+  const { ref, tabOpen, handleToggleSidebar } = useCloseTaskbar();
   const [isLargerThan800] = useMediaQuery(`(min-width: ${SHOW_SIDEBAR_WIDTH})`);
-
-  function handleToggleSidebar(): void {
-    if (!isLargerThan800) {
-      //preventing stale state w/. callback
-      setTabOpen((prevTabOpen) => !prevTabOpen);
-    }
-  }
-
-  useOutsideClick({
-    ref: ref,
-    //outside click will only take effect on "ref"ed element if the tab is open, otherwise nothing will take effect//
-    handler: () => {
-      tabOpen && handleToggleSidebar();
-    },
-  });
 
   return (
     <Flex overflowX="hidden" position="relative" height="100vh" width="100vw">
       <Box
-        //boxing each flex item so we can style them
-        //click detects OUTSIDE this component, thus anywhere outside the sidebar
         ref={ref}
         bg="white"
         zIndex={100}
@@ -41,12 +22,11 @@ export default function AppLayout() {
         }}
       >
         <SidebarLayout
-          handleToggleSidebar={handleToggleSidebar}
           tabOpen={tabOpen}
+          handleToggleSidebar={handleToggleSidebar}
           isLargerThan800={isLargerThan800}
         />
       </Box>
-      {/* if tab is open we darken the mainLayout via box */}
       {tabOpen && (
         <Box
           zIndex={50}
