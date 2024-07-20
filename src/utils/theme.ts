@@ -1,4 +1,4 @@
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme, SystemStyleObject, ThemeConfig } from "@chakra-ui/react";
 import "@fontsource/poppins";
 import "@fontsource/manrope";
 import { SHOW_SIDEBAR_WIDTH } from "./config";
@@ -91,5 +91,19 @@ const theme = extendTheme({
     "2xl": "96em", // 1536px
   },
 });
+
+export const buttonResetStyles: SystemStyleObject = {
+  all: "unset",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "start",
+  border: "none",
+  cursor: "pointer",
+  userSelect: "none",
+  outline: "none",
+  padding: 0,
+  margin: 0,
+  boxShadow: "none",
+};
 
 export default theme;

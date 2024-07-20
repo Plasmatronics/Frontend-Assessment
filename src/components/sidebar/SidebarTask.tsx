@@ -1,7 +1,8 @@
 import React from "react";
-import { HStack, Link, Text } from "@chakra-ui/react";
+import { HStack, Button, Text } from "@chakra-ui/react";
 import * as ChakraIcons from "@chakra-ui/icons";
 import { AllChakraColors } from "../../utils/types";
+import { buttonResetStyles } from "../../utils/theme";
 
 interface ChatProps {
   icon: keyof typeof ChakraIcons;
@@ -21,10 +22,14 @@ export default function SidebarTask({
 
   return (
     //if its a chat element we will highlight gray, otherwise just make it clickable
-    <Link
-      paddingX={3}
-      paddingY={2.5}
-      borderRadius={isChat ? "md" : undefined}
+    <Button
+      sx={{
+        ...buttonResetStyles,
+        paddingLeft: 2,
+        paddingRight: 4,
+        paddingY: 2.5,
+        borderRadius: isChat ? "md" : undefined,
+      }}
       _hover={{
         background: isChat ? "gray.400" : undefined,
       }}
@@ -43,6 +48,6 @@ export default function SidebarTask({
           {text}
         </Text>
       </HStack>
-    </Link>
+    </Button>
   );
 }
