@@ -33,6 +33,9 @@ export default function SidebarTask({
       _hover={{
         background: isChat ? "gray.400" : undefined,
       }}
+      _active={{
+        background: isChat ? "gray.400" : undefined,
+      }}
     >
       <HStack as="span">
         <IconComponent boxSize={4} color={color} />
