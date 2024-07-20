@@ -1,16 +1,16 @@
 import { Input, useMediaQuery } from "@chakra-ui/react";
 
 export default function BasicSearchbar() {
-  const [isNotPhone] = useMediaQuery(`(min-width: 31.25em)`);
-  // 31.25 em =500px
+  const [isBiggerThanLandscapeTablet] = useMediaQuery(`(max-width: 63em)`);
+  // 50 em =800px
 
   return (
     <Input
       borderRadius="inherit"
       placeholder={
-        isNotPhone
-          ? "Generate a detailed fence estimation outline."
-          : "Are fences expensive?"
+        isBiggerThanLandscapeTablet
+          ? "Are fences expensive?"
+          : "Generate a detailed fence estimation outline."
       }
       textAlign="center"
       letterSpacing="normal"
