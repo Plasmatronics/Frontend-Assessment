@@ -1,10 +1,11 @@
 import { AddIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import {
+  Link,
+  Circle,
   Input,
   InputGroup,
   InputLeftElement,
   InputRightElement,
-  IconButton,
 } from "@chakra-ui/react";
 import { colorDarkener } from "../../utils/helpers";
 
@@ -12,27 +13,26 @@ function Searchbar() {
   return (
     <InputGroup
       borderRadius="md"
-      width={{ xs: "lg", sm: "xl", xl: "75%" }}
+      width={{ sm: "md", xl: "75%" }}
       sx={{ boxShadow: "0px 3px 4px 1px rgba(0, 0, 0, 0.25)" }}
     >
-      <InputLeftElement>
-        <IconButton
-          color="white"
-          bgColor="green.500"
-          fontSize={15}
-          size="xs"
-          icon={<AddIcon />}
-          aria-label="Add File"
-          isRound={true}
-          _hover={{ background: colorDarkener("green.500") }}
-          _active={{
-            background: colorDarkener("green.500"),
-            transform: "translateY(0.5px)",
-            boxShadow: "base",
-          }}
-          _focus={{ background: colorDarkener("green.500") }}
-        />
-      </InputLeftElement>
+      <Link>
+        <InputLeftElement>
+          <Circle
+            bg="green.500"
+            padding={1}
+            _hover={{ background: colorDarkener("green.500") }}
+            _active={{
+              background: colorDarkener("green.500"),
+              transform: "translateY(0.5px)",
+              boxShadow: "base",
+            }}
+            _focus={{ background: colorDarkener("green.500") }}
+          >
+            <AddIcon color="white" />
+          </Circle>
+        </InputLeftElement>
+      </Link>
       <Input
         borderRadius="inherit"
         placeholder='"Example": Generate a detailed fence estimation outline.'
@@ -46,23 +46,20 @@ function Searchbar() {
           color: "stone.100",
         }}
       />
-      <InputRightElement>
-        <IconButton
-          color="green.500"
-          bgColor="white"
-          fontSize={15}
-          size="xs"
-          icon={<ArrowRightIcon />}
-          aria-label="Add File"
-          _hover={{ background: "white" }}
-          _active={{
-            background: "white",
-            transform: "translateY(0.5px)",
-            boxShadow: "base",
-          }}
-          _focus={{ background: "white" }}
-        />
-      </InputRightElement>
+      <Link>
+        <InputRightElement>
+          <ArrowRightIcon
+            color="green.500"
+            _hover={{ color: colorDarkener("green.500") }}
+            _active={{
+              color: colorDarkener("green.500"),
+              transform: "translateY(0.5px)",
+              boxShadow: "base",
+            }}
+            _focus={{ color: colorDarkener("green.500") }}
+          />
+        </InputRightElement>
+      </Link>
     </InputGroup>
   );
 }

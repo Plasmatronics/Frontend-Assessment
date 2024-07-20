@@ -2,7 +2,10 @@
 
 ## How to Run Project (Vite)
 
-To run the file...
+To run the file.:
+Install Packages via: **npm i**
+
+THEN...
 development version: **npm run dev**
 build version: **npm run build**
 
