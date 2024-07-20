@@ -98,6 +98,5 @@ _components_: This is where all the meat is. I have a sub folder for the aside a
 ## Potential Improvements
 
 There are some improvements I would definitely like to make and I very well might in a few hours:
--Adding Dark Mode, which is also able to detect user's system setting (dark or light).
--Adding more accesibility (pressing the tab button will filter through all possible inputs, buttons, and links in an orderly way).\
+-Fixing the Colors for dark Mode
 -add a custom icon.\

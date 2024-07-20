@@ -10,6 +10,13 @@ const themeConfiguration: ThemeConfig = {
 
 const theme = extendTheme({
   themeConfiguration,
+  styles: {
+    global: {
+      "::selection": {
+        backgroundColor: "green.300", // customizing text to brand color
+      },
+    },
+  },
   fonts: {
     heading: `'manrope', sans-serif`,
     body: `'poppins', sans-serif`,
@@ -37,13 +44,6 @@ const theme = extendTheme({
       100: "#74747c",
       200: "#464652",
       300: "#3a3a47",
-    },
-  },
-  styles: {
-    global: {
-      "::selection": {
-        backgroundColor: "green.300", // customizing text to brand color
-      },
     },
   },
   fontSizes: {
