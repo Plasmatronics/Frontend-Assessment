@@ -100,6 +100,7 @@ _components_: This is where all the meat is. I have a sub folder for the aside a
 There are some improvements I would definitely like to make and I very well might in a few hours:\
 -Fixing the Colors for dark Mode\
 -add a custom icon+ change current icons to a more expansive icon pack.\
+-App Layout does two things as it stands: it composes the layout of taskbar and the main area, but it is also responsible for the outside click logic. The thing I would change above all else is this as it violated the S in the SOLID principles.\
 
 ## Extras (DONT NEED TO READ)
 
