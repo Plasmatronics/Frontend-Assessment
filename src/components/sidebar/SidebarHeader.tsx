@@ -1,12 +1,13 @@
 import { CalendarIcon } from "@chakra-ui/icons";
 import { Text, Flex, Center } from "@chakra-ui/react";
+
 import { userData } from "../../database/defaultData";
 
 export default function SidebarHeader() {
   return (
     <Center>
       <Flex sx={{ gap: "0.7rem" }} width="100%">
-        {/* again using the esacoe hatch for gap */}
+        {/* again using the esacpe hatch for gap */}
         <Center>
           <CalendarIcon boxShadow="lg" color="green.400" boxSize={8} />
         </Center>

@@ -1,9 +1,10 @@
 import { Divider, Flex } from "@chakra-ui/react";
+
 import SidebarHeader from "./SidebarHeader";
 import SidebarBody from "./SidebarBody";
 import SidebarFooter from "./SidebarFooter";
 
-export default function SidebarBaseComponent() {
+export default function SidebarBase() {
   return (
     <Flex
       as="aside"

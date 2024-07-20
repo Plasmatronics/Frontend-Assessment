@@ -1,5 +1,6 @@
 import { Flex, useColorMode } from "@chakra-ui/react";
-import SidebarTask from "./SidebarTask";
+
+import SidebarButton from "./SidebarButton";
 import { settingsData } from "../../database/defaultData";
 
 export default function SidebarFooter() {
@@ -7,11 +8,11 @@ export default function SidebarFooter() {
 
   return (
     <Flex direction="column" mt={2}>
-      {/* rendering a sidebartask for each setting with ths specified variations */}
+      {/* rendering a sidebar button for each setting with ths specified variations */}
       {settingsData.map((setting, index) => {
         const isSunIcon = setting.icon === "SunIcon";
         return (
-          <SidebarTask
+          <SidebarButton
             key={index}
             //renders dark mode or light mode icon, or the current setting icon
             icon={

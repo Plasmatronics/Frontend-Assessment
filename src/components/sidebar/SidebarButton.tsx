@@ -1,6 +1,7 @@
 import React from "react";
 import { HStack, Button, Text } from "@chakra-ui/react";
 import * as ChakraIcons from "@chakra-ui/icons";
+
 import { AllChakraColors } from "../../utils/types";
 import { buttonResetStyles } from "../../utils/theme";
 
@@ -12,7 +13,7 @@ interface ChatProps {
   onClick?: () => void;
 }
 
-export default function SidebarTask({
+export default function SidebarButton({
   icon,
   text,
   color = "gray.900",

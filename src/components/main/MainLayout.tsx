@@ -1,8 +1,10 @@
 import { Flex } from "@chakra-ui/react";
+
 import Features from "./Features";
 import MainHeading from "./MainHeading";
 import SearchbarWithButtons from "./SearchbarWithButtons";
 
+//One job---> To lay main section out
 function MainLayout() {
   return (
     <Flex

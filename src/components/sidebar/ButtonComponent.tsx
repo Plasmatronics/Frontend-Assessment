@@ -1,6 +1,6 @@
 import { Button, Center, Text } from "@chakra-ui/react";
 import * as ChakraIcons from "@chakra-ui/icons";
-// import { colorLightener } from "../../utils/helpers";
+
 import { colorDarkener } from "../../utils/helpers";
 import { AllChakraColors } from "../../utils/types";
 
@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 //restricting this API to icon, text, and buttonColor
-
+//one goal--> clicking and expanadble button component
 export default function ButtonComponent({
   icon,
   text,

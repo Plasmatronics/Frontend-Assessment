@@ -1,5 +1,6 @@
 import { Divider, Flex, Text } from "@chakra-ui/react";
 
+//one job--> to display main heading
 function MainHeading() {
   return (
     <Flex alignItems="center" justifyContent="center">

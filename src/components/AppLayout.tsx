@@ -12,6 +12,7 @@ export default function AppLayout() {
 
   function handleToggleSidebar(): void {
     if (!isLargerThan800) {
+      //preventing stale state w/. callback
       setTabOpen((prevTabOpen) => !prevTabOpen);
     }
   }
@@ -27,6 +28,8 @@ export default function AppLayout() {
   return (
     <Flex overflowX="hidden" position="relative" height="100vh" width="100vw">
       <Box
+        //boxing each flex item so we can style them
+        //click detects OUTSIDE this component, thus anywhere outside the sidebar
         ref={ref}
         bg="white"
         zIndex={100}
@@ -43,6 +46,7 @@ export default function AppLayout() {
           isLargerThan800={isLargerThan800}
         />
       </Box>
+      {/* if tab is open we darken the mainLayout via box */}
       {tabOpen && (
         <Box
           zIndex={50}

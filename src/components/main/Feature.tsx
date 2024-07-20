@@ -8,6 +8,7 @@ interface FeatureProps {
 }
 
 //limiting the api to heading, the actual text, and the icon
+//one job--> to style incoming feature component
 function Feature({ icon, heading, text }: FeatureProps) {
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
@@ -25,7 +26,7 @@ function Feature({ icon, heading, text }: FeatureProps) {
         letterSpacing="tight"
         fontWeight="semibold"
         fontFamily="poppins"
-        fontSize={{ sm: "md", xl: "lg" }}
+        fontSize={{ base: "sm", sm: "md", xl: "lg" }}
         color="stone.300"
       >
         {heading}
@@ -34,7 +35,7 @@ function Feature({ icon, heading, text }: FeatureProps) {
         letterSpacing="tight"
         fontWeight="medium"
         fontFamily="poppins"
-        fontSize={{ sm: "xxs", xl: "xs" }}
+        fontSize={{ base: "xxs", xl: "xs" }}
         color="stone.200"
         align="center"
       >

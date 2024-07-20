@@ -5,10 +5,14 @@ import {
   InputRightElement,
   IconButton,
 } from "@chakra-ui/react";
+
 import { colorDarkener } from "../../utils/helpers";
 import BasicSearchbar from "./BasicSearchbar";
 
+// goal-->display basicSearchbar with button components
 function SearchbarWithButtons() {
+  const darkenedGreen500 = colorDarkener("green.500");
+
   return (
     <InputGroup
       borderRadius="md"
@@ -16,6 +20,7 @@ function SearchbarWithButtons() {
       sx={{ boxShadow: "0px 3px 4px 1px rgba(0, 0, 0, 0.25)" }}
     >
       <InputLeftElement>
+        {/* //considered abstarcting icon buttons, but not enough benefit in reusability and readability */}
         <IconButton
           color="white"
           bgColor="green.500"
@@ -24,13 +29,13 @@ function SearchbarWithButtons() {
           icon={<AddIcon />}
           aria-label="Add File"
           isRound={true}
-          _hover={{ background: colorDarkener("green.500") }}
+          _hover={{ background: darkenedGreen500 }}
           _active={{
-            background: colorDarkener("green.500"),
+            background: darkenedGreen500,
             transform: "translateY(0.5px)",
             boxShadow: "base",
           }}
-          _focus={{ background: colorDarkener("green.500") }}
+          _focus={{ background: darkenedGreen500 }}
         />
       </InputLeftElement>
       <BasicSearchbar />
@@ -41,7 +46,7 @@ function SearchbarWithButtons() {
           fontSize={15}
           size="xs"
           icon={<ArrowRightIcon />}
-          aria-label="Add File"
+          aria-label="Search"
           _hover={{ background: "white" }}
           _active={{
             background: "white",
