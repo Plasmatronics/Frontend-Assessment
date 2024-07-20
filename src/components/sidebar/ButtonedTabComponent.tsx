@@ -4,17 +4,12 @@ import SidebarBaseComponent from "./SidebarBaseComponent";
 import { Box } from "@chakra-ui/react";
 
 export default function ButtonedTabComponent({
-  setTabOpen,
   tabOpen,
+  handleToggleSidebar,
 }: AcceptsTabState) {
-  //toggling upon button push
-  function handleTabButtonClick(): void {
-    setTabOpen((prevTabOpen) => !prevTabOpen);
-  }
-
   return (
     <Box position={"relative"}>
-      <TabButton onClick={handleTabButtonClick} />
+      <TabButton onClick={handleToggleSidebar} />
       {/* //if its open well present the component, otherwise not */}
       {tabOpen && <SidebarBaseComponent />}
     </Box>

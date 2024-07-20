@@ -1,8 +1,10 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, useColorMode } from "@chakra-ui/react";
 import SidebarTask from "./SidebarTask";
 import { settingsData } from "../../database/defaultData";
 
 export default function SidebarFooter() {
+  // const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex direction="column" mt={2}>
       {/* rendering a sidebartask for each setting with ths specified variations */}

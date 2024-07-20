@@ -1,9 +1,15 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 import "@fontsource/poppins";
 import "@fontsource/manrope";
 import { SHOW_SIDEBAR_WIDTH } from "./config";
 
+const themeConfiguration: ThemeConfig = {
+  initialColorMode: "system",
+  useSystemColorMode: true,
+};
+
 const theme = extendTheme({
+  themeConfiguration,
   fonts: {
     heading: `'manrope', sans-serif`,
     body: `'poppins', sans-serif`,
@@ -31,6 +37,13 @@ const theme = extendTheme({
       100: "#74747c",
       200: "#464652",
       300: "#3a3a47",
+    },
+  },
+  styles: {
+    global: {
+      "::selection": {
+        backgroundColor: "green.300", // customizing text to brand color
+      },
     },
   },
   fontSizes: {

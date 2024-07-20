@@ -95,9 +95,9 @@ _components_: This is where all the meat is. I have a sub folder for the aside a
 ## Potential Improvements
 
 There are some improvements I would definitely like to make and I very well might in a few hours:
--Able to close the tab component in mobile-mode by clicking outside the tab.\
+-Able to close the tab component in mobile-mode by clicking outside the tab.(COMPLETED)\
 -Adding Dark Mode, which is also able to detect user's system setting (dark or light).\
--Adding a custom highlight color for highlighted text.\
+-Adding a custom highlight color for highlighted text.(DONE)\
 -Adding more accesibility (pressing the tab button will filter through all possible inputs, buttons, and links in an orderly way).\
 -I later found out we have an iconbutton component so i would go back and unnest some buttons and such i wanted to click on.\
 -add a custom icon.\
