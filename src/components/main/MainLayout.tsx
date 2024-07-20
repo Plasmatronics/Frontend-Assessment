@@ -32,7 +32,7 @@ function MainLayout() {
           top={0}
           left={0}
           width="100vw"
-          height="200vh"
+          height="100vh"
         />
       )}
       <MainHeading />
