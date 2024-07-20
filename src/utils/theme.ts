@@ -13,7 +13,6 @@ const theme = extendTheme({
   themeConfiguration,
   styles: {
     global: (props: SystemStyleObject) => ({
-      //how this dark mode is implemented is explained in the README.md
       body: {
         bg: mode("white", "gray.800")(props),
         color: mode("gray.800", "whiteAlpha.900")(props),

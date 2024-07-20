@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import Features from "./Features";
 import MainHeading from "./MainHeading";
-import Searchbar from "./Searchbar";
+import SearchbarWithButtons from "./SearchbarWithButtons";
 
 function MainLayout() {
   return (
@@ -19,7 +19,7 @@ function MainLayout() {
       }}
     >
       <MainHeading />
-      <Searchbar />
+      <SearchbarWithButtons />
       <Features />
     </Flex>
   );

@@ -6,7 +6,7 @@ function MainHeading() {
       <Text
         as="h2"
         fontWeight="bold"
-        fontSize={{ sm: "3xl", xl: "4xl" }}
+        fontSize={{ base: "xl", xs: "2xl", sm: "3xl", xl: "4xl" }}
         color="stone.200"
         flexShrink={0}
       >
@@ -25,7 +25,7 @@ function MainHeading() {
       <Text
         as="h1"
         fontWeight="black"
-        fontSize={{ sm: "4xl", xl: "5xl" }}
+        fontSize={{ base: "2xl", xs: "3xl", sm: "4xl", xl: "5xl" }}
         color="stone.300"
       >
         FenceGPT

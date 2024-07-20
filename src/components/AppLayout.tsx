@@ -12,7 +12,6 @@ export default function AppLayout() {
 
   function handleToggleSidebar(): void {
     if (!isLargerThan800) {
-      console.log("opened!");
       setTabOpen((prevTabOpen) => !prevTabOpen);
     }
   }
@@ -26,7 +25,7 @@ export default function AppLayout() {
   });
 
   return (
-    <Flex overflow="hidden" position="relative" height="100vh" width="100vw">
+    <Flex overflowX="hidden" position="relative" height="100vh" width="100vw">
       <Box
         ref={ref}
         bg="white"
@@ -52,7 +51,7 @@ export default function AppLayout() {
           top={0}
           left={0}
           width="100vw"
-          height="100vh"
+          height="200vh"
         />
       )}
       <Box zIndex={10} flex={1}>
