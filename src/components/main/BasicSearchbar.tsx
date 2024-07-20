@@ -7,6 +7,7 @@ export default function BasicSearchbar() {
   return (
     <Input
       borderRadius="inherit"
+      //making placeholder shorter if our device is too thin
       placeholder={
         isBiggerThanLandscapeTablet
           ? "Are fences expensive?"

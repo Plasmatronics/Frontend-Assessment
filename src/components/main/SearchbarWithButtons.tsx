@@ -10,7 +10,7 @@ import { colorDarkener } from "../../utils/helpers";
 import BasicSearchbar from "./BasicSearchbar";
 
 // goal-->display basicSearchbar with button components
-function SearchbarWithButtons() {
+export default function SearchbarWithButtons() {
   const darkenedGreen500 = colorDarkener("green.500");
 
   return (
@@ -59,5 +59,3 @@ function SearchbarWithButtons() {
     </InputGroup>
   );
 }
-
-export default SearchbarWithButtons;

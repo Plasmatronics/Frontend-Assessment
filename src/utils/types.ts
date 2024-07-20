@@ -107,9 +107,3 @@ export type AllChakraColors =
   | "stone.200"
   | "stone.300"
   | "stone.400";
-
-export interface AcceptsTabState {
-  tabOpen: boolean;
-  handleToggleSidebar: () => void;
-  isLargerThan800?: boolean;
-}

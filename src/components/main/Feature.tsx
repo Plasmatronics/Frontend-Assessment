@@ -9,7 +9,7 @@ interface FeatureProps {
 
 //limiting the api to heading, the actual text, and the icon
 //one job--> to style incoming feature component
-function Feature({ icon, heading, text }: FeatureProps) {
+export default function Feature({ icon, heading, text }: FeatureProps) {
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
@@ -44,5 +44,3 @@ function Feature({ icon, heading, text }: FeatureProps) {
     </Flex>
   );
 }
-
-export default Feature;

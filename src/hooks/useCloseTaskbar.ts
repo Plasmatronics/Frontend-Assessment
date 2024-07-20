@@ -6,9 +6,11 @@ export function useCloseTaskbar() {
   const ref = useRef<HTMLDivElement | null>(null);
 
   function handleToggleSidebar(): void {
+    //callback to avoid stale state
     setTabOpen((prevTabOpen) => !prevTabOpen);
   }
 
+  //if we click OUTSIDE whatever we attach this ref to we call the handler
   useOutsideClick({
     ref: ref,
     handler: () => {

@@ -15,12 +15,12 @@ const theme = extendTheme({
   styles: {
     global: (props: SystemStyleObject) => ({
       body: {
-        //trigger white if light mode aand gray if dark
+        //trigger white if light mode and gray if dark
         bg: mode("white", "gray.800")(props),
         color: mode("gray.800", "whiteAlpha.900")(props),
       },
       "::selection": {
-        //trigger green300 if light mode and
+        //trigger green300 if light mode and green500 if dark
         backgroundColor: mode("green.300", "green.500")(props),
       },
     }),
