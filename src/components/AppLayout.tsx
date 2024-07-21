@@ -6,15 +6,15 @@ import { useCloseTaskbar } from "../contexts/CloseTaskbarContext";
 import { SHOW_SIDEBAR_WIDTH } from "../utils/config";
 
 export default function AppLayout() {
-  const { tabOpen, ref } = useCloseTaskbar();
-  const [isLargerThan800] = useMediaQuery(`(min-width: ${SHOW_SIDEBAR_WIDTH})`);
+  const { tabOpen, ref } = useCloseTaskbar(); //This hook seems similar to the logic used in Chakra's `Drawer` component, good idea.
+  const [isLargerThan800] = useMediaQuery(`(min-width: ${SHOW_SIDEBAR_WIDTH})`); //This could be substituted for `useBreakpointValue`
 
   return (
     <Flex overflowX="hidden" position="relative" height="100vh" width="100vw">
-      <Box
+      <Box //Can opt for a ChakraUI `Drawer` component here
         ref={ref}
-        bg="white"
-        zIndex={100}
+        bg="white" //Likely cause for dark-mode issues
+        zIndex={100} //Prefer semantic tokens from ChakraUI (https://v2.chakra-ui.com/docs/styled-system/theme#z-index-values)
         position={tabOpen ? "fixed" : "relative"}
         width={{
           base: tabOpen ? "200px" : "0px",
@@ -25,7 +25,10 @@ export default function AppLayout() {
         {/* // prop drilling just a level or two is fine here */}
         <SidebarLayout isLargerThan800={isLargerThan800} />
       </Box>
-      <Box zIndex={10} flex={1}>
+	  {
+		//Prefer semantic tokens for zIndex values ^
+	  }
+      <Box zIndex={10} flex={1}> 
         <MainLayout />
       </Box>
     </Flex>

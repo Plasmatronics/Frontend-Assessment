@@ -125,3 +125,30 @@ sidebar right border: gray.500\
 searchbar icons, calendar icon: green.400\
 log out: green.300\
 divider in main heading: green.500\
+
+
+### Assessment Criteria
+
+Your implementation will be evaluated based on the following criteria:
+
+- **Design Fidelity**: How closely the implemented UI matches the Figma design.
+- **Use of ChakraUI**: Proper usage of ChakraUI components and styling system.
+- **Code Quality**: Adherence to modularity, SOLID principles, and DRY principle.
+- **Readability and Maintainability**: Clarity and organization of the code.
+- **Responsiveness**: How well the UI adapts to different screen sizes (desktop and mobile).
+
+Grading (Performed by Steven & Bryan):
+| Criteria                  | Score | Comments                                      |
+|---------------------------|-------|-----------------------------------------------|
+| Design Fidelity           | 8/10  | UI closely matches the Figma design, minor layout inconsistencies, overall negligible           |
+| Use of ChakraUI           | 7/10  | Good use of ChakraUI components & inline styling. Some components could have been used (like Drawer) instead of manual implementations (no need to reinvent the wheel), would have also liked to have seen an extension of the ChakraUI theme in a `theme` or `styles` folder (https://v2.chakra-ui.com/docs/styled-system/customize-theme)          |
+| Code Quality              | 8/10  | Great modularity and adherence to DRY Principle. Some subtle SRP violations.     |
+| Readability and Maintainability | 8/10  | Good organization overall & documentation. Some related components could have been grouped together in further subdirectories (e.g., Sidebar)              |
+| Responsiveness            | 9/10  | UI adapts well to different screen sizes, Sidebar is a bit small on mobile      |
+
+Overall Score: 40/50
+
+### Additional Comments
+Great work! The implementation is very close to the design, and the code quality is high-tier and what I would expect from an ambitious Junior Developer. The responsiveness is also well done. Some minor improvements could be made to the use of ChakraUI components and the organization of the components. Keep up the good work! 🚀
+
+We look forward to setting up a call to discuss further and next steps.

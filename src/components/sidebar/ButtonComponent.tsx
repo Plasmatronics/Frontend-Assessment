@@ -24,7 +24,7 @@ export default function ButtonComponent({
   const IconComponent = ChakraIcons[icon] as React.ElementType;
 
   return (
-    <Center>
+    <Center> { /** This is a good component, but I'd opt to leave `Center` out and in a parent component / more specific implementation as it is not clear that an abstract ButtonComponent itself should always be centered*/ }
       <Button
         leftIcon={<IconComponent boxSize={3} color="black" />}
         borderRadius="md"
