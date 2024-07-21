@@ -14,7 +14,7 @@ build version: **npm run build**
 ### My Method
 
 The way I see it there are two approaches to component reusability:\
-a). have discriminator types that determine what will render... e.g...\
+a). have discriminator types that determine what will render... e.g...
 
 ```tsx
 function superAwesomeButton({ variation }: { type: "success" | "error" }) {
