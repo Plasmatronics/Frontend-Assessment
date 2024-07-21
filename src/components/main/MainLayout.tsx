@@ -18,7 +18,7 @@ function MainLayout() {
       justifyContent="center"
       alignItems="center"
       sx={{
-        gap: {
+        gap: { //This gap doesn't need to be in `sx`, you can call gap inline
           base: "2rem",
           xl: "3.4rem",
         },
@@ -26,7 +26,9 @@ function MainLayout() {
     >
       {tabOpen && (
         <Box
-          zIndex={50}
+          zIndex={
+			50 //Prefer semantic tokens for zIndex values
+		  } 
           bg="rgba(0, 0, 0, 0.6)"
           position="absolute"
           top={0}
