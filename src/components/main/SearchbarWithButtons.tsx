@@ -24,7 +24,6 @@ export default function SearchbarWithButtons() {
         <IconButton
           color="white"
           bgColor="green.500"
-          fontSize={15}
           size="xs"
           icon={<AddIcon />}
           aria-label="Add File"

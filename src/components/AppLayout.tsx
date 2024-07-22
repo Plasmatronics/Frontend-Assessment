@@ -13,7 +13,6 @@ export default function AppLayout() {
     <Flex overflowX="hidden" position="relative" height="100vh" width="100vw">
       <Box
         ref={ref}
-        bg="white"
         zIndex={100}
         position={tabOpen ? "fixed" : "relative"}
         width={{
