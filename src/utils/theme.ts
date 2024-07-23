@@ -16,7 +16,7 @@ const theme = extendTheme({
     global: (props: SystemStyleObject) => ({
       body: {
         //trigger white if light mode and gray if dark
-        bg: mode("white", "gray.700")(props),
+        bg: mode("white", "var(--chakra-colors-dark-gradient)")(props),
         color: mode("gray.800", "whiteAlpha.900")(props),
       },
       "::selection": {
@@ -25,34 +25,33 @@ const theme = extendTheme({
       },
       ":root": {
         //white
-        "--chakra-colors-white": mode("#fff", "gray.800")(props),
+        "--chakra-colors-white": mode("#fff", "#EDF2F7")(props),
+        //black
+        "--chakra-colors-black": mode("#000000", "#b7b7b9")(props),
+        //gradient
+        "--chakra-colors-dark-gradient":
+          "linear-gradient(180deg, #07071a 40%, #101110)",
         // Gray color scale
         "--chakra-colors-gray-50": mode("#F6F9FA", "#2D2D2D")(props),
-        "--chakra-colors-gray-100": mode("#F0F1F1", "#3A3A3A")(props),
+        "--chakra-colors-gray-100": mode("#F0F1F1", "#F0F1F1")(props),
+        "--chakra-colors-gray-150": mode("#F0F1F1", "#727272")(props),
         "--chakra-colors-gray-200": mode("#E6E9E9", "#484848")(props),
         "--chakra-colors-gray-300": mode("#DDE0E0", "#565656")(props),
         "--chakra-colors-gray-400": mode("#CFD1D1", "#646464")(props),
         "--chakra-colors-gray-500": mode("#C0C3C3", "#727272")(props),
         "--chakra-colors-gray-900": mode("#171923", "#EDF2F7")(props),
         // Green color scale
-        "--chakra-colors-green-300": mode("#51cf66", "#3D8B47")(props),
-        "--chakra-colors-green-400": mode("#58bb3f", "#347A3A")(props),
-        "--chakra-colors-green-500": mode("#1C9A0A", "#2B6930")(props),
-        "--chakra-colors-green-600": mode("#138808", "#225727")(props),
+        "--chakra-colors-green-200": mode("#1C9A0A", "#28ce3e")(props),
+        "--chakra-colors-green-300": mode("#51cf66", "#2cb43e")(props),
+        "--chakra-colors-green-400": mode("#58bb3f", "#2ab636")(props),
+        "--chakra-colors-green-500": mode("#1C9A0A", "#27812e")(props),
+        "--chakra-colors-green-600": mode("#138808", "#1db62d")(props),
       },
     }),
   },
   fonts: {
     heading: `'manrope', sans-serif`,
     body: `'poppins', sans-serif`,
-  },
-  colors: {
-    green: {
-      300: "#51cf66",
-      400: "#58bb3f",
-      500: "#1C9A0A",
-      600: "#138808",
-    },
   },
   fontSizes: {
     xxs: "0.65rem",
@@ -72,18 +71,11 @@ const theme = extendTheme({
   },
   semanticTokens: {
     colors: {
-      stone: {
-        _light: {
-          100: "#74747c",
-          200: "#464652",
-          300: "#3a3a47",
-        },
-        _dark: {
-          100: "#8A8A93",
-          200: "#5E5E6A",
-          300: "#4C4C57",
-        },
-      },
+      "stone.50": { _light: "#ffffff", _dark: "#535753" },
+      "stone.100": { _light: "#74747c", _dark: "#aaaaaa" },
+      "stone.200": { _light: "#464652", _dark: "#b8b8b8" },
+      "stone.300": { _light: "#3a3a47", _dark: "#b7b7b9" },
+      sidebar: { _light: "#f2f3f5", _dark: "#101110" },
     },
   },
 });

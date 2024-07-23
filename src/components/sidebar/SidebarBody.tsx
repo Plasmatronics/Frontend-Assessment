@@ -7,7 +7,7 @@ export default function SidebarBody() {
   return (
     <Flex direction="column" sx={{ gap: "0.2rem" }} mb={7}>
       <PastChats />
-      <ButtonComponent buttonColor="gray.100" icon="AddIcon" text="New Chat" />
+      <ButtonComponent buttonColor="stone.50" icon="AddIcon" text="New Chat" />
     </Flex>
     // rendering a sidebar tast for each past chat, and then also the button component
   );

@@ -15,8 +15,8 @@ function MainHeading() {
       </Text>
       <Divider
         orientation="vertical"
-        color="green.500"
-        borderColor="green.500"
+        color="green.200"
+        borderColor="green.200"
         borderWidth="1px"
         height={70}
         borderRadius="md"

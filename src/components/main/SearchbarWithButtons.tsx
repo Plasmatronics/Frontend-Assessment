@@ -40,19 +40,18 @@ export default function SearchbarWithButtons() {
       <BasicSearchbar />
       <InputRightElement>
         <IconButton
-          color="green.500"
-          bgColor="white"
-          fontSize={15}
-          size="xs"
+          color="green.200"
+          bgColor="transparent"
+          size="lg"
           icon={<ArrowRightIcon />}
           aria-label="Search"
-          _hover={{ background: "white" }}
+          _hover={{ background: "transparent" }}
           _active={{
-            background: "white",
+            background: "transparent",
             transform: "translateY(0.5px)",
             boxShadow: "base",
           }}
-          _focus={{ background: "white" }}
+          _focus={{ background: "transparent" }}
         />
       </InputRightElement>
     </InputGroup>
