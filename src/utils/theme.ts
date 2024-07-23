@@ -16,7 +16,7 @@ const theme = extendTheme({
     global: (props: SystemStyleObject) => ({
       body: {
         //trigger white if light mode and gray if dark
-        bg: mode("white", "gray.800")(props),
+        bg: mode("white", "gray.700")(props),
         color: mode("gray.800", "whiteAlpha.900")(props),
       },
       "::selection": {
